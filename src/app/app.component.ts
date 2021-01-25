@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'heap-tech-test';
+  brands = [
+    'assets/brands/mit.svg', 
+    'assets/brands/iit.svg', 
+    'assets/brands/imperial.svg', 
+    'assets/brands/eth.svg'
+  ]
 }

@@ -1,0 +1,142 @@
+#main__content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        height: 100px;
+
+        img {
+            height: inherit;
+            width: 238px;
+            cursor: pointer;
+        }
+
+        nav {
+            text-align: right;
+            width: 397px;
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 18px;
+                color: #626161;
+               
+            }
+            a:not(:last-child) {
+                margin-right: 29px;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+
+    div.body {
+        margin-top: 100px;
+    }
+
+    div.row {
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+            margin-bottom: 17px;
+            max-width: 443px;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+            max-width: 443px;
+        }
+
+        button {
+            font-size: 22px;
+            font-weight: 700;
+            background-color: var(--primary-color);
+            padding: 14px 42px;
+            border-radius: 10px;
+            margin-top: 32px;
+            margin-bottom: 40px;
+            border: none;
+        }
+
+        .note {
+            color: var(--tertiary-color);
+            font-size: 15px;
+            margin-bottom: 11px;
+        }
+
+        .img-fluid {
+            float: right;
+        }
+
+        .brands {
+            width: 275px;
+            img {
+                flex: 1;
+                margin-right: 27px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 0 12px;
+        header {
+            nav {
+                display: none;
+            }
+
+            button {
+                display: block;
+                background-color: transparent;
+                color: var(--primary-color);
+            }
+
+            button:focus {
+                background-color: var(--primary-color);
+                color: var(--light-color);
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .nav-link {
+            color: var(--secondary-color);
+            font-size: 20px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+            font-weight: 500;
+            background-color: rgba(100,24,19, 0.1);
+        }
+
+        div.row {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            text-align: center;
+
+            img {
+                margin-bottom: 80px;
+            }
+
+            button, .brands {
+                width: 100%;
+            }
+
+            .brands {
+                img {
+                    margin: 0 5px;
+                }
+               
+            }
+        }   
+    }
+}
